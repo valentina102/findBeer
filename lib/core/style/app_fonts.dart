@@ -9,9 +9,26 @@ class AppTextStyle {
 
   TextStyle get button {
     return _baseTextStyle.copyWith(
-      fontSize: ScreenSize.height(context) * 0.026, //93
+      fontSize: 20, //93
       fontWeight: FontWeight.w400,
       color: AppColors.white,
+    );
+  }
+  TextStyle get bottomNavigation {
+    return _baseTextStyle.copyWith(fontSize: 10);
+  }
+  TextStyle get textForm {
+    return _baseTextStyle.copyWith(
+      fontSize: 16,
+      color: AppColors.darkBrown,
+    );
+  }
+
+  TextStyle get header {
+    return _baseTextStyle.copyWith(
+      fontSize: 30, //93
+      fontWeight: FontWeight.w400,
+      color: AppColors.redWine,
     );
   }
 

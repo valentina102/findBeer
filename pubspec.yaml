@@ -19,6 +19,8 @@ dependencies:
   intl: ^0.17.0
   lottie: ^1.4.3
   universal_io: ^2.0.4
+  qr_flutter: ^4.0.0
+  flutter_barcode_scanner: ^2.0.0
 
 dev_dependencies:
   bloc_test: ^9.1.0
@@ -31,5 +33,7 @@ flutter:
   uses-material-design: true
   generate: true
 
-assets:
-  - assets/lottie/
+  assets:
+    - assets/icons/
+    - assets/lottie/
+
