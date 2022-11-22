@@ -7,7 +7,6 @@ import 'package:find_beer/core/widgets/header.dart';
 import 'package:find_beer/features/scanner/presentation/bloc/scanner_cubit.dart';
 import 'package:find_beer/injection_container.dart';
 import 'package:flutter/material.dart';
-import 'package:qr_flutter/qr_flutter.dart';
 
 class ScannerPage extends BasePage<ScannerState, ScannerCubit> {
   const ScannerPage({Key? key}) : super(key: key);

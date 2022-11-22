@@ -49,10 +49,8 @@ class LoginPage extends BasePage<LoginState, LoginCubit> {
                       suffixFunction: bloc.changeObscureText,
                       obscureText: state.obscureTextPassword,
                       fieldPassword: true,
-                      validateField: (String? value) {
-                        return true;
-                      },
-                      invalidMessage: 'Ingresa una contrast valida',
+                      validateField: passwordValidation,
+                      invalidMessage: 'Ingresa una contraseña valida',
                     )
                   ],
                 )),
@@ -64,9 +62,7 @@ class LoginPage extends BasePage<LoginState, LoginCubit> {
                   horizontal: ScreenSize.width(context) * 0.1),
               child: CustomButton(
                   backgroundColor: AppColors.brown,
-                  function: () => AppNavigator.pushNamedAndRemoveUntil(
-                      Routes.BOTTOMNAVIGATION,
-                      arguments: 2,),
+                  function: () =>bloc.login(),
                   fontColor: AppColors.white,
                   textButton: 'Login',
                   borderColor: AppColors.brown,),

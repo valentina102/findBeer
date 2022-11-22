@@ -34,7 +34,7 @@ class CardBrewery extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Image.network(
+            child: Image.asset(
               brewery.image,
               height: ScreenSize.height(context) * 0.2,
             ),

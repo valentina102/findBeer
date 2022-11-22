@@ -3,6 +3,7 @@ import 'package:find_beer/core/style/app_color.dart';
 import 'package:find_beer/core/style/app_fonts.dart';
 import 'package:find_beer/features/bottom_navigation/presentation/bloc/bottom_navigation_cubit.dart';
 import 'package:find_beer/features/home/presentation/pages/Home.dart';
+import 'package:find_beer/features/location/presentation/pages/loading_screen.dart';
 import 'package:find_beer/features/login/presentation/pages/login.dart';
 import 'package:find_beer/features/profile/presentation/pages/profile.dart';
 import 'package:find_beer/features/qr/presentation/pages/qr.dart';
@@ -76,7 +77,7 @@ class BottomNavigationPage
 Widget showPage(int currentIndex) {
   switch (currentIndex) {
     case 0:
-      return const LoginPage();
+      return const LoadingScreen();
     case 1:
       return const QrPage();
     case 2:

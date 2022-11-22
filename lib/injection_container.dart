@@ -1,6 +1,8 @@
 import 'package:find_beer/features/bottom_navigation/presentation/bloc/bottom_navigation_cubit.dart';
 import 'package:find_beer/features/home/presentation/bloc/home_cubit.dart';
+import 'package:find_beer/features/location/presentation/bloc/location/location_cubit.dart';
 import 'package:find_beer/features/login/presentation/bloc/login_cubit.dart';
+import 'package:find_beer/features/map/presentation/bloc/map/map_cubit.dart';
 import 'package:find_beer/features/profile/presentation/bloc/profile_cubit.dart';
 import 'package:find_beer/features/qr/presentation/bloc/qr_cubit.dart';
 import 'package:find_beer/features/scanner/presentation/bloc/scanner_cubit.dart';
@@ -27,6 +29,12 @@ void init() {
   );
   sl.registerFactory<ScannerCubit>(
     () => ScannerCubit(),
+  );
+  sl.registerFactory<MapCubit>(
+    () => MapCubit(),
+  );
+  sl.registerFactory<LocationCubit>(
+    () => LocationCubit(),
   );
 //
 //   //Use Case

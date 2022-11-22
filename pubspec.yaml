@@ -21,6 +21,9 @@ dependencies:
   universal_io: ^2.0.4
   qr_flutter: ^4.0.0
   flutter_barcode_scanner: ^2.0.0
+  google_maps_flutter: ^2.2.1
+  geolocator: ^8.2.1
+  permission_handler: ^9.2.0
 
 dev_dependencies:
   bloc_test: ^9.1.0

@@ -21,7 +21,7 @@ class BreweryModel {
       id: '1',
       name: 'Cervecería Lateral Calle 65',
       descripTion: 'Cerveceria tradicional ubicada en la calle 65, con una gran variedad de cervezas ',
-      image:'https://www.elcolombiano.com/binrepository/780x856/0c179/780d565/none/11101/WGDY/cerveza-de-papa_40666541_20220912121055.jpg',
+      image:'assets/icons/beer.png',
        address: 'Cl. 65 #3B-07, Bogotá, D.C, Bogotá',
       latitude: '100',
       longitude: '50');

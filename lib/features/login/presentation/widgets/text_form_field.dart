@@ -14,6 +14,7 @@ class TextForm extends StatelessWidget {
   final String suffixIcon;
   final String invalidMessage;
   final Function suffixFunction;
+  final bool enable;
   final bool Function(String?) validateField;
   const TextForm(
       {required this.controller,
@@ -27,6 +28,7 @@ class TextForm extends StatelessWidget {
       required this.isFocus,
       required this.suffixFunction,
       required this.validateField,
+        this.enable = true,
       Key? key})
       : super(key: key);
 
@@ -38,6 +40,7 @@ class TextForm extends StatelessWidget {
       child: Focus(
         onFocusChange: (focused) => onFocus(focused),
         child: TextFormField(
+          enabled: enable ,
           controller: controller,
           validator: (value) {
             if (validateField(value))

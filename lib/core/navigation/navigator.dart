@@ -1,5 +1,6 @@
 import 'package:find_beer/core/widgets/Dialog_log_out.dart';
 import 'package:find_beer/features/bottom_navigation/presentation/pages/bottom_navigation.dart';
+import 'package:find_beer/features/map/presentation/widgets/create_booking.dart';
 import 'package:find_beer/features/profile/presentation/pages/profile.dart';
 
 import '../animations/fade_page_route.dart';
@@ -7,17 +8,19 @@ import '../../features/login/presentation/pages/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:universal_io/io.dart';
 
-enum Routes { LOGIN, BOTTOMNAVIGATION, DIALOGLOGOUT }
+enum Routes { LOGIN, BOTTOMNAVIGATION, DIALOGLOGOUT, CREATEBOOKING }
 
 class _Page {
   static const String login = '/login';
   static const String bottom_navigation = '/bottom_navigation';
   static const String dialog_log_out = '/dialog_log_out';
+  static const String create_booking = '/create_booking';
 
   static const Map<Routes, String> _pageMap = {
     Routes.LOGIN: login,
     Routes.BOTTOMNAVIGATION: bottom_navigation,
     Routes.DIALOGLOGOUT: dialog_log_out,
+    Routes.CREATEBOOKING: create_booking,
   };
 
   static String? page(Routes routes) => _pageMap[routes];
@@ -50,6 +53,11 @@ class AppNavigator {
       case _Page.dialog_log_out:
         return _pageRoute(
           page: const DialogLogOut(),
+          routeSettings: settings,
+        );
+        case _Page.create_booking:
+        return _pageRoute(
+          page: const CreateBooking(),
           routeSettings: settings,
         );
       default:
